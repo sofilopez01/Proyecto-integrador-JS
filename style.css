@@ -1,0 +1,102 @@
+* {
+  margin: 0%;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+}
+:root {
+  --primary: #e8e8e8;
+  --secondary: #333333;
+  --tertiary: #990100;
+  --color-4: #f6f6f6;
+  --color-5: #e00a0a;
+}
+
+body {
+  background: var(--secondary);
+}
+
+header {
+  background: var(--primary);
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  padding: 0px 2rem 0px 2rem;
+  z-index: 999;
+}
+
+.navar a {
+  color: var(--tertiary);
+  font-weight: 600;
+  text-decoration: inherit;
+  margin: 0rem 0.3rem 0rem 0.3rem;
+}
+.nav-logo img {
+  height: 4rem;
+  width: 7rem;
+}
+.navar a:hover {
+  color: var(--color-5);
+  border-bottom: solid 2px var(--color-5);
+}
+
+/* HERO */
+
+.background-img {
+  height: 100vh;
+  background-image: url("/integrdor-2/assets/img/hero/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+.contenido {
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  height: 100%;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-tittle img {
+  height: 18rem;
+  width: 25rem;
+}
+
+.hero-tittle h2 {
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--color-4);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  background: var(--tertiary);
+}
+.btn:hover {
+  background-color: var(--color-5);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
