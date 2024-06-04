@@ -5,7 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-size: 1rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 :root {
   --primary: #e8e8e8;
@@ -16,7 +16,7 @@
 }
 
 body {
-  background: var(--secondary);
+  background: rgb(11, 11, 11);
 }
 
 header {
@@ -48,40 +48,41 @@ header {
 }
 
 /* HERO */
-
-.background-img {
-  height: 100vh;
-  background-image: url("/integrdor-2/assets/img/hero/background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 4rem;
-}
-.contenido {
-  display: flex;
-  text-align: center;
-  align-items: center;
-
-  height: 100%;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-tittle img {
-  height: 18rem;
-  width: 25rem;
-}
-
-.hero-tittle h2 {
-  color: rgb(0, 0, 0);
+#hero {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:end;
+  min-height: 100vh;
+  background: url("assets/img/hero/background.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+.wrapper {
+  width: 30rem;
+  background: #000000ab;
+  border: 2px solid rgb(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgb(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.875rem 2.4rem;
+  margin-bottom: 5rem;
 }
 
+.hero-information {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-information h1{
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
 .btn {
   padding: 1rem 3rem;
   font-size: 1.5rem;
@@ -99,4 +100,139 @@ header {
   background-color: var(--color-5);
   transform: scale(1.1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*================ABOUT================*/
+
+/*================NUESTRA HISTORIA================*/
+.about-info {
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-container-history {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  padding: 1rem;
+}
+
+.about-text {
+  width: 50%;
+}
+
+.about-text .about-title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-align: right;
+  margin: 1.5rem 0;
+}
+
+.about-text h3 {
+  text-align: right;
+  color: var(--primary);
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+.about-container-img {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.img-history {
+  height: 18rem;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 6px rgba(31, 31, 31, 0.863);
+  border-radius: 1rem;
+}
+/*================NUESTRA FILOSOFIA================*/
+.about-container-philosophy {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  padding: 1rem;
+}
+.img-philosophy {
+  height: 18rem;
+  margin-bottom: 1rem;
+  box-shadow: -4px 4px 6px rgba(31, 31, 31, 0.863);
+  border-radius: 1rem;
+}
+/*================CARDS================ */
+.about-card {
+  padding: 4rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about-card h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--tertiary);
+}
+
+.info-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 350px;
+  height: 40%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 14rem;
+  border-radius: 1rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--tertiary);
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  line-height: 1.75;
 }
